@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
+import {AiOutlineWhatsApp} from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 
@@ -21,53 +20,54 @@ export const Contact =() => {
               <div className='h-full lg:p-4 '>
                 <div>
                   <h2 className='py-2'>Tiffany Pietersen</h2>
-                  <p>FullStack Developer</p>
-                  <p>I am always excited to connect with like-minded individuals and share my experiences and insights. Let's Chat</p>
+                  <p className='px-1'>FullStack Developer</p>
+                  <p className='py-2'>I am always excited to connect with like-minded individuals and share my experiences and insights. Let's Chat</p>
                 </div>
                 <div>
-                  <p className='pt-8 uppercase'>Connect With Me</p>
+                  <p className='pt-8 uppercase'>Connect Me</p>
                   <div className='flex items-center justify-between py-4'>
                     <Link
                       href='https://www.linkedin.com/in/tiffany-pietersen-1297b2213'
                       target='_blank'
                       rel='noreferrer'
+                      title="LinkedIn"
                     >
-                      <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110'>
+                      <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-500 hover:scale-110'>
                         <FaLinkedinIn />
                       </div>
                     </Link>
                     <Link
-                      href='https://github.com/fireclint'
+                      href='https://github.com/CrazyChips34'
                       target='_blank'
                       rel='noreferrer'
+                      title="GitHub"
                     >
                       <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110'>
                         <FaGithub />
                       </div>
                     </Link>
-  
-                    <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110'>
-                      <AiOutlineMail />
-                    </div>
-                    <Link href='/resume'>
-                    
-                        <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110'>
-                          <BsFillPersonLinesFill />
-                        </div>
-                      
+                    <Link
+                      href='https://wa.me/0812561948'
+                      target='_blank'
+                      rel='noreferrer'
+                      title="WhatsApp"
+                    >
+                      <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110'>
+                        <AiOutlineWhatsApp />
+                      </div>
                     </Link>
+  
                   </div>
                 </div>
               </div>
             </div>
   
             {/* right */}
-            <div className='w-full h-auto col-span-3 shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
+            <div className='w-full h-auto col-span-3 shadow-xl shadow-gray-600 rounded-xl lg:p-4'>
               <div className='p-4'>
                 <form
-                  action='https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060'
+                  action='https://getform.io/f/58da03db-3ee4-469e-bca4-3138d8a8a7b6'
                   method='POST'
-                  encType='multipart/form-data'
                 >
                   <div className='grid w-full gap-4 py-2 md:grid-cols-2'>
                     <div className='flex flex-col'>
@@ -113,7 +113,7 @@ export const Contact =() => {
                       name='message'
                     ></textarea>
                   </div>
-                  <button className='w-full p-4 mt-4 text-gray-100'>
+                  <button className='w-full p-4 mt-4 text-gray-700 hover:text-black'>
                     Send Message
                   </button>
                 </form>
@@ -125,7 +125,7 @@ export const Contact =() => {
               
                 <div className='p-4 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110'>
                   <HiOutlineChevronDoubleUp
-                    className='text-[#5651e5]'
+                    className='text-[#4566af]'
                     size={30}
                   />
                 </div>
