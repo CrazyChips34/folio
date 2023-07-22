@@ -34,22 +34,22 @@ export const Navbar = () => {
       <div className='fixed bottom-0 left-0 z-10 w-full bg-transparent'>
         <nav className='flex items-center justify-center py-2 mx-auto bg-opacity-50 md:py-4 lg:py-6 max-w-7xl'>
           <ul className='flex items-center justify-center w-1/2 space-x-4 text-sm text-gray-500 md:space-x-6 lg:space-x-8 md:text-base'>
-            <li className='p-2 border border-gray-200 rounded-full hover:bg-gray-200'>
+            <li className='p-2 border border-gray-200 rounded-full hover:bg-gray-300'>
               <Link to='home' smooth={true} duration={500}>
                 <BsFillHouseFill className='text-2xl' />
               </Link>
             </li>
-            <li className='p-2 border border-gray-200 rounded-full hover:bg-gray-200'>
+            <li className='p-2 border border-gray-200 rounded-full hover:bg-gray-300'>
               <Link to='about' smooth={true} duration={500}>
                 <BsFillPersonFill className='text-2xl' />
               </Link>
             </li>
-            <li className='p-2 border border-gray-200 rounded-full hover:bg-gray-200'>
+            <li className='p-2 border border-gray-200 rounded-full hover:bg-gray-300'>
               <Link to='skills' smooth={true} duration={500}>
                 <BsFillGearFill className='text-2xl' />
               </Link>
             </li>
-            <li className='p-2 border border-gray-200 rounded-full hover:bg-gray-200'>
+            <li className='p-2 border border-gray-200 rounded-full hover:bg-gray-300'>
               <Link to='contact' smooth={true} duration={500}>
                 <BsFillEnvelopeFill className='text-2xl' />
               </Link>
