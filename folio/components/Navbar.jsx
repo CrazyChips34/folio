@@ -8,8 +8,8 @@ export const Navbar = () => {
   return (
     <div>
       {/*-----Top NavBar-----*/}
-      <nav className='flex justify-between py-10 mb-12' >
-        <h1 id='home' className='text-xl uppercase font-Montserrat'>codedbytiffos</h1>
+      <nav id='home' className='flex justify-between py-10 mb-12' >
+        <h1 className='text-xl uppercase font-Montserrat'>codedbytiffos</h1>
         <ul className='flex items-center'>
           <div className='flex items-center space-x-4'>
             <li>

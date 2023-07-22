@@ -11,9 +11,9 @@ import NextJS from '../public/assets/nextjs.png'
 export const Skills =() => {
     return (
     
-      <div id='skills' className='w-full p-2 lg:h-screen'>
+      <div id='skills' className='w-full p-2 lg:h-screen min-h-screen'>
         <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
-          <p className='py-10 text-4xl font-medium text-blue-500 md:text-5xl'>
+          <p className='py-5 text-4xl font-medium text-blue-500 md:text-5xl'>
             Skills
           </p>
           <h2 className='py-4'>What I Can Do</h2>
@@ -75,6 +75,76 @@ export const Skills =() => {
                 </div>
                 <div className='flex flex-col items-center justify-center'>
                   <h3>Next</h3>
+                </div>
+              </div>
+            </div>
+            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
+              <div className='grid items-center justify-center grid-cols-2 gap-4'>
+                <div className='m-auto'>
+                  <Image src={Css} width='64px' height='64px' alt='/' />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>Python</h3>
+                </div>
+              </div>
+            </div>
+            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
+              <div className='grid items-center justify-center grid-cols-2 gap-4'>
+                <div className='m-auto'>
+                  <Image src={Css} width='64px' height='64px' alt='/' />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>JAVA</h3>
+                </div>
+              </div>
+            </div>
+            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
+              <div className='grid items-center justify-center grid-cols-2 gap-4'>
+                <div className='m-auto'>
+                  <Image src={Css} width='64px' height='64px' alt='/' />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>Azure DevOps</h3>
+                </div>
+              </div>
+            </div>
+            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
+              <div className='grid items-center justify-center grid-cols-2 gap-4'>
+                <div className='m-auto'>
+                  <Image src={Css} width='64px' height='64px' alt='/' />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>Microsoft Office</h3>
+                </div>
+              </div>
+            </div>
+            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
+              <div className='grid items-center justify-center grid-cols-2 gap-4'>
+                <div className='m-auto'>
+                  <Image src={Css} width='64px' height='64px' alt='/' />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>C#</h3>
+                </div>
+              </div>
+            </div>
+            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
+              <div className='grid items-center justify-center grid-cols-2 gap-4'>
+                <div className='m-auto'>
+                  <Image src={Css} width='64px' height='64px' alt='/' />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>Bootstrap</h3>
+                </div>
+              </div>
+            </div>
+            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
+              <div className='grid items-center justify-center grid-cols-2 gap-4'>
+                <div className='m-auto'>
+                  <Image src={Css} width='64px' height='64px' alt='/' />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>Node JS</h3>
                 </div>
               </div>
             </div>

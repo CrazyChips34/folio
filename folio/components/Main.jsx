@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AiFillGithub, AiFillLinkedin, AiOutlineWhatsApp } from 'react-icons/ai';
 import Link from 'next/link';
-import Typing from 'react-typing-effect';
+
 
 export const Main =() => {
     const [showName, setShowName] = useState(false);
@@ -22,9 +22,7 @@ export const Main =() => {
         <div className='px-10 bg-white md:px-20 lg:px-40 dark:bg-gray-800 min-h-screen'>
             <div className='text-center' >
             <p className='py-2 text-4xl md:text-4xl'>Hi, I'm </p>
-            <Typing speed={100}>
-            <h2 className='py-2 text-5xl font-medium text-blue-500 md:text-6xl'>Tiffany Pietersen</h2>
-            </Typing>
+            <h2 className='py-2 text-5xl font-medium text-blue-500 md:text-6xl animate-bounce delay-900'>Tiffany Pietersen</h2>
             <h3 className='py-2 text-3xl md:text-3xl'>A Full Stack Developer</h3>
             <p className='max-w-2xl text-md py-2 mx-auto leading-8 text-gray-400 text-md md:text-lg'>
               As a <span className='text-blue-400'>Full Stack Developer</span>, I am passionate about learning new technologies and finding 
