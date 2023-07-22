@@ -18,11 +18,12 @@ export const Navbar = () => {
             <li>
               <Link
                 className="px-4 py-2 ml-8 text-white rounded-md bg-gradient-to-r from-blue-300 to-blue-500"
-                href="#"
+                href="/../public/docs/Tiffany Pietersen CV.pdf"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
+                download
               >
-                CV
+               CV
               </Link>
             </li>
           </div>

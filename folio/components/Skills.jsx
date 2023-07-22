@@ -11,7 +11,7 @@ import NextJS from '../public/assets/nextjs.png'
 export const Skills =() => {
     return (
     
-        <div id='skills' className='w-full p-2 lg:h-screen'>
+      <div id='skills' className='w-full p-2 lg:h-screen'>
         <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
           <p className='py-10 text-4xl font-medium text-blue-500 md:text-5xl'>
             Skills
