@@ -1,5 +1,7 @@
 import React from "react"
 import Image from 'next/image'
+
+//Importing images 
 import Html from '../public/assets/html.png'
 import Css from '../public/assets/css.png'
 import Javascript from '../public/assets/javascript.png'
@@ -15,161 +17,92 @@ import TailwindImg from '../public/assets/tailwind.png'
 import Azure from '../public/assets/Azure_DevOp.png'
 import Python from '../public/assets/python.png'
 
+//import the react-multi-carousel library and its styles
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
 
 export const Skills =() => {
-    return (
-    
+  //creating an array of the images 
+  const slides = [
+    { src: Html, title: 'HTML' },
+    { src: Css, title: 'CSS' },
+    { src: Javascript, title: 'JavaScript' },
+    { src: ReactImg, title: 'React' },
+    { src: Github, title: 'Github' },
+    { src: NextJS, title: 'Next' },
+    { src: Python, title: 'Python' },
+    { src: Java, title: 'JAVA' },
+    { src: Azure, title: 'Azure DevOps' },
+    { src: Microsoft, title: 'Microsoft Office' },
+    { src: C, title: 'C#' },
+    { src: Bootstrap, title: 'Bootstrap' },
+    { src: NodeJS, title: 'Node JS' },
+    { src: TailwindImg, title: 'Tailwind CSS' },
+  ];
+
+ //creating an object that determines the reponsive behaviour of the carousel for different devices 
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1,
+    },
+  };
+    // Group the slides into chunks of 6
+  const groupedSlides = [];
+  for (let i = 0; i < slides.length; i += 2) {
+    groupedSlides.push(slides.slice(i, i + 2));
+  }
+
+  //Adding a maximum slides per page limit 
+  const maxSlidesCol = 2;
+
+
+  return (
       <div id='skills' className='w-full p-2 lg:h-screen min-h-screen'>
-        <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
-          <p className='py-5 text-4xl font-medium text-blue-500 md:text-5xl'>
+        <p className='py-5 text-4xl font-medium text-blue-500 md:text-5xl'>
             Skills
           </p>
           <h2 className='py-4'>What I Can Do</h2>
-          <div className='grid grid-cols-2 gap-8 lg:grid-cols-4'>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={Html} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>HTML</h3>
-                </div>
-              </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={Css} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>CSS</h3>
-                </div>
-              </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={Javascript} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>JavaScript</h3>
+       <Carousel
+        responsive={responsive}
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={4000}
+        containerClass='carousel-container'
+        itemClass='carousel-item'
+      >
+        {groupedSlides.map((group, groupIndex) => (
+          <div key={groupIndex}>
+            {group.map((slide, index) => (
+              (groupIndex === 0 && index < maxSlidesCol) || (groupIndex > 0) ?
+              <div key={index} className='p-9 duration-900 ease-in shadow-xl rounded-xl hover:scale-105'>
+                <div className='grid items-center justify-center gap-6'>
+                  <div className='m-auto'>
+                    <Image src={slide.src} width={65} height={65} alt='/' />
+                  </div>
+                  <div className='flex flex-col items-center justify-center'>
+                    <h3>{slide.title}</h3>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={ReactImg} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>React</h3>
-                </div>
-              </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={Github} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>Github</h3>
-                </div>
-              </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={NextJS} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>Next</h3>
-                </div>
-              </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={Python} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>Python</h3>
-                </div>
-              </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={Java} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>JAVA</h3>
-                </div>
-              </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={Azure} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>Azure DevOps</h3>
-                </div>
-              </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={Microsoft} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>Microsoft Office</h3>
-                </div>
-              </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={C} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>C#</h3>
-                </div>
-              </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={Bootstrap} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>Bootstrap</h3>
-                </div>
-              </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={NodeJS} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>Node JS</h3>
-                </div>
-              </div>
-            </div>
-            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
-              <div className='grid items-center justify-center grid-cols-2 gap-4'>
-                <div className='m-auto'>
-                  <Image src={TailwindImg} width={64} height={64} alt='/' />
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <h3>Tailwind CSS</h3>
-                </div>
-              </div>
-            </div>
+              :null
+            ))}
           </div>
-        </div>
-      </div>
-    
-     );
+        ))}
+      </Carousel>
+    </div>
+    );
 };
 
