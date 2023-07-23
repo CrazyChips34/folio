@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import {AiOutlineWhatsApp} from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
-import Svg from '../public/assets/svg/contact.jpg'
+import Svg from '../public/assets/svg/contact.png'
 
 export const Contact =() => {
     return (
@@ -61,8 +61,8 @@ export const Contact =() => {
                   </div>
                 </div>
                 <div>  
-                  <Image src={Svg} alt='/' width={500} height={500} className='rounded-lg'/>
-                  <p className='text-blue-200'>From freepik</p>
+                  <Image src={Svg} alt='/' width={500} height={700} className='rounded-lg'/>
+                  <p className='text-blue-200'>Image by vectorjuice on Freepik</p>
                 </div>
               </div>
             </div>
