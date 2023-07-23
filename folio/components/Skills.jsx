@@ -5,8 +5,16 @@ import Css from '../public/assets/css.png';
 import Javascript from '../public/assets/javascript.png';
 import ReactImg from '../public/assets/react.png';
 import Github from '../public/assets/github1.png';
-import Firebase from '../public/assets/firebase.png';
+import Java from '../public/assets/java.png'
+import C from '../public/assets/C#.png'
 import NextJS from '../public/assets/nextjs.png'
+import NodeJS from '../public/assets/nodejs.jpg'
+import Bootstrap from '../public/assets/Bootstrap.jpg'
+import Microsoft from '../public/assets/Microsoft_Office.png'
+import Tailwind from '../public/assets/tailwind.jpg'
+import Azure from '../public/assets/Azure_DevOp.png'
+import Python from '../public/assets/python.jpg'
+
 
 export const Skills =() => {
     return (
@@ -81,7 +89,7 @@ export const Skills =() => {
             <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
               <div className='grid items-center justify-center grid-cols-2 gap-4'>
                 <div className='m-auto'>
-                  <Image src={Css} width='64px' height='64px' alt='/' />
+                  <Image src={Python} width='64px' height='64px' alt='/' />
                 </div>
                 <div className='flex flex-col items-center justify-center'>
                   <h3>Python</h3>
@@ -91,7 +99,7 @@ export const Skills =() => {
             <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
               <div className='grid items-center justify-center grid-cols-2 gap-4'>
                 <div className='m-auto'>
-                  <Image src={Css} width='64px' height='64px' alt='/' />
+                  <Image src={Java} width='64px' height='64px' alt='/' />
                 </div>
                 <div className='flex flex-col items-center justify-center'>
                   <h3>JAVA</h3>
@@ -101,7 +109,7 @@ export const Skills =() => {
             <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
               <div className='grid items-center justify-center grid-cols-2 gap-4'>
                 <div className='m-auto'>
-                  <Image src={Css} width='64px' height='64px' alt='/' />
+                  <Image src={Azure} width='64px' height='64px' alt='/' />
                 </div>
                 <div className='flex flex-col items-center justify-center'>
                   <h3>Azure DevOps</h3>
@@ -111,7 +119,7 @@ export const Skills =() => {
             <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
               <div className='grid items-center justify-center grid-cols-2 gap-4'>
                 <div className='m-auto'>
-                  <Image src={Css} width='64px' height='64px' alt='/' />
+                  <Image src={Microsoft} width='64px' height='64px' alt='/' />
                 </div>
                 <div className='flex flex-col items-center justify-center'>
                   <h3>Microsoft Office</h3>
@@ -121,7 +129,7 @@ export const Skills =() => {
             <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
               <div className='grid items-center justify-center grid-cols-2 gap-4'>
                 <div className='m-auto'>
-                  <Image src={Css} width='64px' height='64px' alt='/' />
+                  <Image src={C} width='64px' height='64px' alt='/' />
                 </div>
                 <div className='flex flex-col items-center justify-center'>
                   <h3>C#</h3>
@@ -131,7 +139,7 @@ export const Skills =() => {
             <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
               <div className='grid items-center justify-center grid-cols-2 gap-4'>
                 <div className='m-auto'>
-                  <Image src={Css} width='64px' height='64px' alt='/' />
+                  <Image src={Bootstrap} width='64px' height='64px' alt='/' />
                 </div>
                 <div className='flex flex-col items-center justify-center'>
                   <h3>Bootstrap</h3>
@@ -141,10 +149,20 @@ export const Skills =() => {
             <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
               <div className='grid items-center justify-center grid-cols-2 gap-4'>
                 <div className='m-auto'>
-                  <Image src={Css} width='64px' height='64px' alt='/' />
+                  <Image src={NodeJS} width='64px' height='64px' alt='/' />
                 </div>
                 <div className='flex flex-col items-center justify-center'>
                   <h3>Node JS</h3>
+                </div>
+              </div>
+            </div>
+            <div className='p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105'>
+              <div className='grid items-center justify-center grid-cols-2 gap-4'>
+                <div className='m-auto'>
+                  <Image src={Tailwind} width='64px' height='64px' alt='/' />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>Tailwind CSS</h3>
                 </div>
               </div>
             </div>
