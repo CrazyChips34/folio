@@ -46,17 +46,7 @@ export const Contact =() => {
                       <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110'>
                         <FaGithub />
                       </div>
-                    </Link>
-                    <Link
-                      href='https://wa.me/0812561948'
-                      target='_blank'
-                      rel='noreferrer'
-                      title="WhatsApp"
-                    >
-                      <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110'>
-                        <AiOutlineWhatsApp />
-                      </div>
-                    </Link>
+                      </Link>
   
                   </div>
                 </div>

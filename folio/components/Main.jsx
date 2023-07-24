@@ -31,7 +31,7 @@ export const Main =() => {
           </div>
 
           {/*-----Socials-----*/}
-          <div className='flex justify-center gap-16 py-2 text-5xl text-gray-600'>
+          <div className='flex justify-center py-2 text-5xl text-gray-600 gap-14'>
             <Link
                href='https://www.linkedin.com/in/tiffany-pietersen-1297b2213'
                target='_blank'
