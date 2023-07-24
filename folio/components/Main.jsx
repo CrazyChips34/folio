@@ -19,12 +19,12 @@ export const Main =() => {
     };
     return (
         <div className={darkMode ? 'dark' : ''}>
-        <div className='px-10 bg-white md:px-20 lg:px-40 dark:bg-gray-800 min-h-screen'>
+        <div className='min-h-screen px-10 bg-white md:px-20 lg:px-40 dark:bg-gray-800'>
             <div className='text-center' >
             <p className='py-2 text-4xl md:text-4xl'>Hi, I'm </p>
             <h2 className='py-2 text-5xl font-medium text-blue-500 md:text-6xl animate-bounce delay-900'>Tiffany Pietersen</h2>
             <h3 className='py-2 text-3xl md:text-3xl'>A Full Stack Developer</h3>
-            <p className='max-w-2xl text-md py-2 mx-auto leading-8 text-gray-400 text-md md:text-lg'>
+            <p className='max-w-2xl py-2 mx-auto leading-8 text-gray-400 text-md md:text-lg'>
               As a <span className='text-blue-400'>Full Stack Developer</span>, I am passionate about learning new technologies and finding 
               new ways to solve problems. I enjoy working on projects that have a positive impact on people's lives.
             </p>
@@ -48,15 +48,6 @@ export const Main =() => {
             >
             <div className='social-icon' title="GitHub">
             <AiFillGithub />
-            </div>
-            </Link>
-            <Link
-               href='https://wa.me/0812561948'
-               target='_blank'
-               rel='noreferrer'
-            >
-            <div className='social-icon' title="WhatsApp">
-            <AiOutlineWhatsApp />
             </div>
             </Link>
           </div>
