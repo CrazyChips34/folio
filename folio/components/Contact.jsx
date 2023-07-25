@@ -4,12 +4,12 @@ import React, { useState } from 'react';
 import {AiOutlineWhatsApp} from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
-import Svg from '../public/assets/svg/contact.png'
+import Svg from '../public/assets/contact.png'
 
 export const Contact =() => {
     return (
     
-      <div id='contact' className='w-full min-h-screen max-h-screen'>
+      <div id='contact' className='w-full max-h-screen min-h-screen'>
         <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
           <p className='py-10 text-4xl font-medium text-blue-500 md:text-5xl'>
             Contact
@@ -26,7 +26,7 @@ export const Contact =() => {
                 </div>
                 <div>
                   <p className='pt-8 uppercase'>Connect Me</p>
-                  <div className='flex items-center justify-between py-4'>
+                  <div className='flex items-center justify-around py-4'>
                     <Link
                       href='https://www.linkedin.com/in/tiffany-pietersen-1297b2213'
                       target='_blank'

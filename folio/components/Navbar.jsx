@@ -12,13 +12,13 @@ export const Navbar = () => {
         <h1 className='text-xl uppercase font-Montserrat'>codedbytiffos</h1>
         <ul className='flex items-center'>
           <div className='flex items-center space-x-4'>
-            <li>
+           {/* <li>
               <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='text-2xl cursor-pointer' />
-            </li>
+            </li>*/}
             <li>
               <Link
                 className="px-4 py-2 ml-8 text-white rounded-md bg-gradient-to-r from-blue-300 to-blue-500"
-                href="/../public/docs/Tiffany Pietersen CV.pdf"
+                href=".././Tiffany Pietersen CV.pdf"
                 target="_blank"
                 rel="noreferrer"
                 download
