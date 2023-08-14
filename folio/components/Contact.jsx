@@ -58,7 +58,7 @@ export const Contact =() => {
             </div>
   
             {/* right */}
-            <div className='w-full h-auto col-span-3 shadow-xl shadow-gray-600 rounded-xl lg:p-4'>
+            <div className='w-full min-h-screen h-auto col-span-3 shadow-xl shadow-gray-600 rounded-xl lg:p-4'>
               <div className='p-4'>
                 <form
                   action='https://getform.io/f/58da03db-3ee4-469e-bca4-3138d8a8a7b6'

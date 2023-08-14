@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BsFillMoonStarsFill, BsFillHouseFill, BsFillPersonFill, BsFillGearFill, BsFillChatFill, BsFillEnvelopeFill } from 'react-icons/bs';
+import { BsFillMoonStarsFill, BsFillHouseFill, BsFillPersonFill, BsFillGearFill, BsFillEnvelopeFill } from 'react-icons/bs';
 import { Link } from 'react-scroll';
 
 export const Navbar = () => {
@@ -12,19 +12,19 @@ export const Navbar = () => {
         <h1 className='text-xl uppercase font-Montserrat'>codedbytiffos</h1>
         <ul className='flex items-center'>
           <div className='flex items-center space-x-4'>
-           {/* <li>
-              <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='text-2xl cursor-pointer' />
-            </li>*/}
             <li>
-              <Link
+              <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='text-2xl cursor-pointer' />
+            </li>
+            <li>
+              <a
                 className="px-4 py-2 ml-8 text-white rounded-md bg-gradient-to-r from-blue-300 to-blue-500"
-                href=".././Tiffany Pietersen CV.pdf"
+                href='/Curriculum_Vitae _Of_Tiffany_Pietersen.pdf'
                 target="_blank"
                 rel="noreferrer"
                 download
               >
                CV
-              </Link>
+              </a>
             </li>
           </div>
         </ul>
