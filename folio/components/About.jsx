@@ -18,15 +18,15 @@ export const About = () => {
           <p className="max-w-2xl px-2 py-1 mx-auto text-sm text-gray-400 md:text-md">
           In addition to my interest in being a Full Stack Developer, I have a variety of hobbies that keep me busy and help me approach problem-solving from a fresh perspective. 
           I love spending time outdoors and exploring nature through hiking and playing soccer with friends. 
-          When I'm not outside, I enjoy indulging in my love for e-games, reading, and baking.
+          When I'm not outside, I enjoy indulging in my love for e-sports, reading, and baking.
           </p>
           <p className="max-w-2xl px-2 py-1 mx-auto text-sm text-gray-400 md:text-md">
           My curiosity and interest in technology go beyond my work as a developer. 
-          I am always seeking new ways to expand my knowledge and skills, whether it's through reading blogs, or participating in online tutorials.
+          I am always seeking new ways to expand my knowledge and skills, whether it&aposs through reading blogs, or participating in online tutorials.
           </p>
           <p className="max-w-2xl px-2 py-1 mx-auto text-sm text-gray-400 md:text-md">
           Currently, I am doing a learnership at CapaCiTi, which is providing me with valuable real-world experience and allowing me to apply my technical skills in a professional setting. 
-          I am excited to continue learning and growing as a Full Stack Developer, and I am committed to using my skills to make a positive impact on people's lives through software development.
+          I am excited to continue learning and growing as a Full Stack Developer, and I am committed to using my skills to make a positive impact on people&aposs lives through software development.
           </p>
         
       </div>
