@@ -87,7 +87,7 @@ export const Skills =() => {
           <div key={groupIndex}>
             {group.map((slide, index) => (
               (groupIndex === 0 && index < maxSlidesCol) || (groupIndex > 0) ?
-              <div key={index} className='p-9 duration-900 ease-in shadow-xl rounded-xl hover:scale-105'>
+              <div key={index} className='p-9 duration-900 ease-in shadow-xl rounded-xl hover:scale-105 hover:bg-gray-200' style={{ width: '300px', height: '180px' }}>
                 <div className='grid items-center justify-center gap-6'>
                   <div className='m-auto'>
                     <Image src={slide.src} width={65} height={65} alt='/' />
