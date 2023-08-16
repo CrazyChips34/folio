@@ -3,23 +3,32 @@ import { BsFillMoonStarsFill, BsFillSunFill, BsFillHouseFill, BsFillPersonFill, 
 import { Link } from 'react-scroll';
 
 export const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  // Initialize darkMode with a default value of true so default is light mode
+  const [darkMode, setDarkMode] = useState(true); 
+
+
+  const handleDarkModeToggle = () => {
+    setDarkMode(!darkMode); 
+  };
+
+  const buttonClassName = darkMode ? 'dark-mode' : 'light-mode';
 
   return (
     <div>
       {/*-----Top NavBar-----*/}
-      <nav id='home' className='flex justify-between py-10 mb-12' >
-        <h1 className='text-xl uppercase font-Montserrat'>codedbytiffos</h1>
+      <nav id='home' className='flex justify-between py-10 mb-12 dark:bg-gray-600' >
+        <h1 className='text-xl uppercase font-Montserrat dark:text-white'>codedbytiffos</h1>
         <ul className='flex items-center'>
           <div className='flex items-center space-x-4'>
                
+               
             {/** 
-             * <button onClick={handleDarkModeToggle} className='text-2xl cursor-pointer'>
-                     {darkMode ? <BsFillMoonStarsFill /> : <BsFillSunFill />}
-             </button>
              * <li>
-             *  <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='text-2xl cursor-pointer' />
-            </li>*/} 
+               <button onClick={handleDarkModeToggle} className={`text-2xl cursor-pointer ${buttonClassName}`}>
+                     {darkMode ? <BsFillMoonStarsFill /> : <BsFillSunFill />}
+               </button>
+               </li>
+             * */} 
             <li>
               <a
                 className="px-4 py-2 ml-8 text-white rounded-md bg-gradient-to-r from-blue-300 to-blue-500"

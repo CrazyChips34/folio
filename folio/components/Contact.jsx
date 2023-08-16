@@ -1,20 +1,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import {AiOutlineWhatsApp} from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import Svg from '../public/assets/contact.png'
 
 export const Contact =() => {
+  const [darkMode, setDarkMode] = useState(true); 
     return (
-    
+      <div className={darkMode ? 'dark' : ''}>
       <div id='contact' className='w-full max-h-screen min-h-screen'>
         <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
           <p className='py-10 text-4xl font-medium text-blue-500 md:text-5xl'>
             Contact
           </p>
-          <h2 className='py-4'>Get In Touch</h2>
+          <h2 className='py-4 dark:text-white'>Get In Touch</h2>
           <div className='grid gap-8 lg:grid-cols-5'>
             {/* left */}
             <div className='w-full h-full col-span-3 p-4 shadow-xl lg:col-span-2 shadow-gray-400 rounded-xl'>
@@ -22,7 +22,7 @@ export const Contact =() => {
                 <div>
                   <h2 className='py-2'>Tiffany Pietersen</h2>
                   <p className='px-1'>FullStack Developer</p>
-                  <p className='py-2'>I am always excited to connect with like-minded individuals and share my experiences and insights. Let&aposs Chat</p>
+                  <p className='py-2'>I am always excited to connect with like-minded individuals and share my experiences and insights. Let&#39;s Chat</p>
                 </div>
                 <div>
                   <p className='pt-8 uppercase'>Connect Me</p>
@@ -33,7 +33,7 @@ export const Contact =() => {
                       rel='noreferrer'
                       title="LinkedIn"
                     >
-                      <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-500 hover:scale-110'>
+                      <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-500 hover:scale-110 hover:to-blue-500'>
                         <FaLinkedinIn />
                       </div>
                     </Link>
@@ -43,7 +43,7 @@ export const Contact =() => {
                       rel='noreferrer'
                       title="GitHub"
                     >
-                      <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110'>
+                      <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-500 hover:scale-110 hover:to-blue-500'>
                         <FaGithub />
                       </div>
                       </Link>
@@ -128,6 +128,7 @@ export const Contact =() => {
             </Link>
           </div>
         </div>
+      </div>
       </div>
     );
   };

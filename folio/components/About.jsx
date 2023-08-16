@@ -11,14 +11,16 @@ export const About = () => {
           About Me
           </h2>
           <p className="max-w-2xl px-2 py-1 mx-auto text-sm text-gray-400 md:text-md">
-          Hi there! My name is Tiffany Pietersen and I am a Full Stack Developer with a passion for technology and finding innovative solutions to complex problems. 
+          Hi there! My name is Tiffany Pietersen, and I am a Full Stack Developer, with a passion for technology and finding innovative solutions to complex problems. 
           I got my diploma in Software Development at IIE Rosebank College. 
-          It is through my dad that helped spark my interest in going into the technology field at he was very passionate about building and fixing machines especially computers, and it ultimately led me to pursue it as a career.
+          It is my dad that helped spark my interest in going into the technology field, where he was very passionate about building and fixing machines particularly computers, and it ultimately led me to pursue it as a career.
           <br/>
           <br/>
           In addition to my interest in being a Full Stack Developer, I have a variety of hobbies that keep me busy and help me approach problem-solving from a fresh perspective. 
           I love spending time outdoors and exploring nature through hiking and playing soccer with friends. 
           When I&apos;m not outside, I enjoy indulging in my love for e-sports, reading, and baking.
+          My curiosity and interest in technology go beyond my work as a developer. 
+          I am always seeking new ways to expand my knowledge and skills, whether it&apos;s through reading blogs or participating in online tutorials.
           <br/>
           <br/>
           My curiosity and interest in technology go beyond my work as a developer. 
@@ -31,7 +33,7 @@ export const About = () => {
           </p>
         
       </div>
-      <div className="w-auto h-auto p-5 m-auto rounded-lg px-7">
+      <div className="w-auto h-auto p-5 pt-5 m-auto rounded-lg px-7">
         <Image className="ease-in-out rounded-lg hover:animate-pulse"src={PortfolioImg} alt="ME" width={800} height={800} />{/*Image needs to stay the same size when screen gets smaller*/}
       </div>
     </div>
