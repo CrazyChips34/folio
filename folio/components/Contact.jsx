@@ -6,11 +6,12 @@ import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import Svg from '../public/assets/contact.png'
 
 export const Contact =() => {
+  const [darkMode, setDarkMode] = useState(true); 
     return (
       <div className={darkMode ? 'dark' : ''}>
-      <div id='contact' className='w-full max-h-screen min-h-screen dark:bg-gray-800'>
+      <div id='contact' className='w-full max-h-screen min-h-screen'>
         <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
-          <p className='py-10 text-4xl font-medium text-blue-500 md:text-5xl dark:text-blue-700'>
+          <p className='py-10 text-4xl font-medium text-blue-500 md:text-5xl'>
             Contact
           </p>
           <h2 className='py-4 dark:text-white'>Get In Touch</h2>
@@ -32,7 +33,7 @@ export const Contact =() => {
                       rel='noreferrer'
                       title="LinkedIn"
                     >
-                      <div className={`social-icon p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-500 hover:scale-110 ${darkMode ? 'dark-icon' : ''}`}>
+                      <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-500 hover:scale-110 hover:to-blue-500'>
                         <FaLinkedinIn />
                       </div>
                     </Link>
@@ -42,7 +43,7 @@ export const Contact =() => {
                       rel='noreferrer'
                       title="GitHub"
                     >
-                      <div className={`social-icon p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-500 hover:scale-110 ${darkMode ? 'dark-icon' : ''}`}>
+                      <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-500 hover:scale-110 hover:to-blue-500'>
                         <FaGithub />
                       </div>
                       </Link>
