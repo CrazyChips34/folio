@@ -22,7 +22,7 @@ export const Contact =() => {
                 <div>
                   <h2 className='py-2'>Tiffany Pietersen</h2>
                   <p className='px-1'>FullStack Developer</p>
-                  <p className='py-2'>I am always excited to connect with like-minded individuals and share my experiences and insights. Let&aposs Chat</p>
+                  <p className='py-2'>I am always excited to connect with like-minded individuals and share my experiences and insights. Let&#39;s Chat</p>
                 </div>
                 <div>
                   <p className='pt-8 uppercase'>Connect Me</p>

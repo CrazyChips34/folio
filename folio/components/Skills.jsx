@@ -70,11 +70,12 @@ export const Skills =() => {
 
 
   return (
-      <div id='skills' className='w-full p-2 lg:h-screen min-h-screen'>
-        <p className='py-5 text-4xl font-medium text-blue-500 md:text-5xl'>
+    <div className={darkMode ? 'dark' : ''}>
+      <div id='skills' className='w-full p-2 lg:h-screen min-h-screen dark:bg-gray-800'>
+        <p className='py-5 text-4xl font-medium text-blue-500 md:text-5xl dark:text-blue-500'>
             Skills
           </p>
-          <h2 className='py-4'>What I Can Do</h2>
+          <h2 className='py-4 dark:text-white'>What I Can Do</h2>
        <Carousel
         responsive={responsive}
         infinite={true}
@@ -102,6 +103,7 @@ export const Skills =() => {
           </div>
         ))}
       </Carousel>
+    </div>
     </div>
     );
 };
