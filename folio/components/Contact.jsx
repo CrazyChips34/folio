@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import {AiOutlineWhatsApp} from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import Svg from '../public/assets/contact.png'

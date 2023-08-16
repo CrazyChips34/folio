@@ -22,12 +22,11 @@ export const About = () => {
           <br/>
           <br/>
           My curiosity and interest in technology go beyond my work as a developer. 
-          I am always seeking new ways to expand my knowledge and skills, whether it&#39;s through reading blogs, or participating in online tutorials.
+          I am always seeking new ways to expand my knowledge and skills, whether it&#39;s through reading blogs or participating in online tutorials.
           <br/>
           <br/>
-          Currently, I am doing a learnership at CapaCiTi, which is providing me with valuable real-world experience and allowing me to apply my technical skills in a professional setting. 
+          Currently, I am doing a learnership at CapaCiTi, which is helping me gain valuable real-world experience and allowing me to apply my technical skills in a professional setting. 
           I am excited to continue learning and growing as a Full Stack Developer, and I am committed to using my skills to make a positive impact on people&aposs lives through software development.
-
           </p>
         
       </div>

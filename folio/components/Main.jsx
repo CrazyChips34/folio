@@ -26,7 +26,7 @@ export const Main =() => {
             <h3 className='py-2 text-3xl md:text-3xl'>A Full Stack Developer</h3>
             <p className='max-w-2xl py-2 mx-auto leading-8 text-gray-400 text-md md:text-lg'>
               As a <span className='text-blue-400'>Full Stack Developer</span>, I am passionate about learning new technologies and finding 
-              new ways to solve problems. I enjoy working on projects that have a positive impact on people&apos;s lives.
+              new ways to solve problems. I enjoy working on projects that have a positive impact on people&#39;s lives.
             </p>
           </div>
 
