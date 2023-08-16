@@ -3,7 +3,15 @@ import { BsFillMoonStarsFill, BsFillSunFill, BsFillHouseFill, BsFillPersonFill, 
 import { Link } from 'react-scroll';
 
 export const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  // Initialize darkMode with a default value of false
+  const [darkMode, setDarkMode] = useState(true); 
+
+
+  const handleDarkModeToggle = () => {
+    setDarkMode(!darkMode); 
+  };
+
+  const buttonClassName = darkMode ? 'dark-mode' : 'light-mode';
 
   return (
     <div>
@@ -13,10 +21,13 @@ export const Navbar = () => {
         <ul className='flex items-center'>
           <div className='flex items-center space-x-4'>
                
-            {/** 
-             * <button onClick={handleDarkModeToggle} className='text-2xl cursor-pointer'>
+               <li>
+               <button onClick={handleDarkModeToggle} className={`text-2xl cursor-pointer ${buttonClassName}`}>
                      {darkMode ? <BsFillMoonStarsFill /> : <BsFillSunFill />}
-             </button>
+               </button>
+               </li>
+            {/** 
+             * 
              * <li>
              *  <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='text-2xl cursor-pointer' />
             </li>*/} 
