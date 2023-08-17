@@ -71,6 +71,7 @@ export const Contact =() => {
                         className='flex p-3 border-2 border-gray-300 rounded-lg'
                         type='text'
                         name='name'
+                        required
                       />
                     </div>
                     <div className='flex flex-col'>
@@ -90,6 +91,8 @@ export const Contact =() => {
                       className='flex p-3 border-2 border-gray-300 rounded-lg'
                       type='email'
                       name='email'
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                      required
                     />
                   </div>
                   <div className='flex flex-col py-2'>
@@ -98,6 +101,7 @@ export const Contact =() => {
                       className='flex p-3 border-2 border-gray-300 rounded-lg'
                       type='text'
                       name='subject'
+                      required
                     />
                   </div>
                   <div className='flex flex-col py-2'>
@@ -106,6 +110,7 @@ export const Contact =() => {
                       className='p-3 border-2 border-gray-300 rounded-lg'
                       rows='10'
                       name='message'
+                      required
                     ></textarea>
                   </div>
                   <button className='w-full p-4 mt-4 text-gray-700 hover:text-black'>

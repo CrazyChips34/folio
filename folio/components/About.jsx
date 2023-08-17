@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <div id="about" className='flex items-center w-full min-h-screen p-2 pt-8 pb-16 md:h-screen'>
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
-        <div className='col-span-2'>
+        <div className='col-span-2'> 
          <h2 className="py-5 text-4xl font-medium text-blue-500 md:text-5xl">
           About Me
           </h2>
@@ -19,8 +19,6 @@ export const About = () => {
           In addition to my interest in being a Full Stack Developer, I have a variety of hobbies that keep me busy and help me approach problem-solving from a fresh perspective. 
           I love spending time outdoors and exploring nature through hiking and playing soccer with friends. 
           When I&apos;m not outside, I enjoy indulging in my love for e-sports, reading, and baking.
-          My curiosity and interest in technology go beyond my work as a developer. 
-          I am always seeking new ways to expand my knowledge and skills, whether it&apos;s through reading blogs or participating in online tutorials.
           <br/>
           <br/>
           My curiosity and interest in technology go beyond my work as a developer. 
