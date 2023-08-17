@@ -103,6 +103,7 @@ export const Skills =() => {
         ))}
       </Carousel>
     </div>
+
     );
 };
 

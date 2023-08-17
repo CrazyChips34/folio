@@ -29,7 +29,7 @@ export const About = () => {
           <br/>
           Currently, I am doing a learnership at CapaCiTi, which is providing me with valuable real-world experience and allowing me to apply my technical skills in a professional setting. 
           I am excited to continue learning and growing as a Full Stack Developer, and I am committed to using my skills to make a positive impact on people&aposs lives through software development.
-
+          
           </p>
         
       </div>
