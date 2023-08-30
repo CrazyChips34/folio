@@ -10,7 +10,7 @@ export const About = () => {
          <h2 className="py-5 text-4xl font-medium text-blue-500 md:text-5xl">
           About Me
           </h2>
-          <p className="max-w-2xl px-2 py-1 mx-auto text-sm text-gray-400 md:text-md">
+          <p className="max-w-2xl px-2 py-1 mx-auto text-sm text-gray-700 md:text-md">
           Hi there! My name is Tiffany Pietersen, and I am a Full Stack Developer, with a passion for technology and finding innovative solutions to complex problems. 
           I got my diploma in Software Development at IIE Rosebank College. 
           It is my dad that helped spark my interest in going into the technology field, where he was very passionate about building and fixing machines particularly computers, and it ultimately led me to pursue it as a career.
@@ -26,7 +26,7 @@ export const About = () => {
           <br/>
           <br/>
           Currently, I am doing a learnership at CapaCiTi, which is providing me with valuable real-world experience and allowing me to apply my technical skills in a professional setting. 
-          I am excited to continue learning and growing as a Full Stack Developer, and I am committed to using my skills to make a positive impact on people&aposs lives through software development.
+          I am excited to continue learning and growing as a Full Stack Developer, and I am committed to using my skills to make a positive impact on people&apos;s lives through software development.
           
           </p>
         
