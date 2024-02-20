@@ -25,8 +25,8 @@ export const About = () => {
           I am always seeking new ways to expand my knowledge and skills, whether it&apos;s through reading blogs, or participating in online tutorials.
           <br/>
           <br/>
-          Currently, I am doing a learnership at CapaCiTi, which is providing me with valuable real-world experience and allowing me to apply my technical skills in a professional setting. 
-          I am excited to continue learning and growing as a Full Stack Developer, and I am committed to using my skills to make a positive impact on people&apos;s lives through software development.
+          Currently, I am doing an Internship at Appmaniazar as an Application and Website Developer, which is providing me with valuable real-world experience and allowing me to apply my technical skills in a professional setting. 
+          I am excited to continue learning and growing as a Developer, and I am committed to using my skills to make a positive impact on people&apos;s lives through software development.
           
           </p>
         

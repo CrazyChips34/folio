@@ -16,6 +16,11 @@ import Microsoft from '../public/assets/Microsoft_Office.png'
 import TailwindImg from '../public/assets/tailwind.png'
 import Azure from '../public/assets/Azure_DevOp.png'
 import Python from '../public/assets/python.png'
+import Flutter from '../public/assets/Flutter.png'
+import Dart from '../public/assets/Dart.png'
+import Flutterflow from '../public/assets/Flutterflow.png'
+import Wordpress from '../public/assets/Wordpress.png'
+
 
 //import the react-multi-carousel library and its styles
 import Carousel from 'react-multi-carousel';
@@ -39,6 +44,10 @@ export const Skills =() => {
     { src: Bootstrap, title: 'Bootstrap' },
     { src: NodeJS, title: 'Node JS' },
     { src: TailwindImg, title: 'Tailwind CSS' },
+    { src: Wordpress, title: 'WordPress' },
+    { src: Flutter, title: 'Flutter' },
+    { src: Flutterflow, title: 'FlutterFlow' },
+    { src: Dart, title: 'Dart' },
   ];
 
  //creating an object that determines the reponsive behaviour of the carousel for different devices 
