@@ -10,26 +10,26 @@ export const About = () => {
          <h2 className="py-5 text-4xl font-medium text-blue-500 md:text-5xl">
           About Me
           </h2>
-          <p className="max-w-2xl px-2 py-1 mx-auto text-sm text-gray-700 md:text-md">
-          Hi there! My name is Tiffany Pietersen, and I am a Full Stack Developer, with a passion for technology and finding innovative solutions to complex problems. 
-          I got my diploma in Software Development at IIE Rosebank College. 
-          It is my dad that helped spark my interest in going into the technology field, where he was very passionate about building and fixing machines particularly computers, and it ultimately led me to pursue it as a career.
-          <br/>
-          <br/>
-          In addition to my interest in being a Full Stack Developer, I have a variety of hobbies that keep me busy and help me approach problem-solving from a fresh perspective. 
-          I love spending time outdoors and exploring nature through hiking and playing soccer with friends. 
-          When I&apos;m not outside, I enjoy indulging in my love for e-sports, reading, and baking.
-          <br/>
-          <br/>
-          My curiosity and interest in technology go beyond my work as a developer. 
-          I am always seeking new ways to expand my knowledge and skills, whether it&apos;s through reading blogs, or participating in online tutorials.
-          <br/>
-          <br/>
-          Currently, I am doing an Internship at Appmaniazar as an Application and Website Developer, which is providing me with valuable real-world experience and allowing me to apply my technical skills in a professional setting. 
-          I am excited to continue learning and growing as a Developer, and I am committed to using my skills to make a positive impact on people&apos;s lives through software development.
-          
+           <p className="max-w-2xl px-2 py-1 mx-auto text-sm text-gray-700 md:text-md">
+            Hi there! My name is <span className="font-semibold">Tiffany Pietersen</span>, and I am a 
+            <span className="font-semibold"> Full Stack Developer</span> with a passion for technology and 
+            creating solutions that make a real difference. I earned my diploma in Software Development at 
+            IIE Rosebank College. My love for tech started at home—my dad was always building and fixing 
+            computers, and his passion for problem-solving inspired me to pursue this path.
+            <br/>
+            <br/>
+            Outside of coding, I enjoy activities that keep me creative and balanced. Whether it&apos;s 
+            <span className="font-semibold"> e-sports, reading, baking, music, or writing</span>, I find these 
+            hobbies give me new perspectives that often carry over into how I approach challenges as a developer. 
+            My faith also plays an important role in shaping who I am, reminding me to stay grounded and purposeful 
+            in everything I do.
+            <br/>
+            <br/>
+            I am currently working at <span className="font-semibold">Appmaniazar as a Software Developer</span>, 
+            where I build and maintain applications and websites that bring ideas to life. This role allows me to 
+            apply my technical skills in real-world projects while continuing to grow as a professional. My ultimate 
+            goal is to keep expanding my knowledge and use technology to make a positive impact on people&apos;s lives.
           </p>
-        
       </div>
       <div className="w-auto h-auto p-5 pt-5 m-auto rounded-lg px-7">
         <Image className="ease-in-out rounded-lg hover:animate-pulse"src={PortfolioImg} alt="ME" width={800} height={800} />{/*Image needs to stay the same size when screen gets smaller*/}
