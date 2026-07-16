@@ -10,6 +10,18 @@ module.exports = {
     extend: {
       fontFamily:{
         Montserrat: "Montserrat",
+        display: ['"Space Grotesk"', 'sans-serif'],
+        body: ['"Inter"', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
+      },
+      colors: {
+        ink: '#14162B',
+        paper: '#F7F3EA',
+        coral: '#FF5D3A',
+        gold: '#E8A33D',
+        sage: '#7C9885',
+        rose: '#E8829E',
+        line: '#E4DDCE',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
