@@ -16,10 +16,9 @@ export const Main = () => {
           I build <span className='text-coral'>software that ships.</span>
         </h1>
         <p className='mt-6 max-w-xl text-base md:text-lg text-ink/70 leading-relaxed'>
-          A developer who likes owning things fully — backend, frontend, and the
-          messy in-between. By day I&apos;m a Sotware Developer. Off the clock, I
-          build my own apps from scratch, usually because I hit a problem I
-          wanted solved properly.
+          A software developer who enjoys owning products end to end—from backend services 
+          to polished user experiences and everything in between. By day I build production software at Appmaniazar. 
+          Outside of work, I&apos;m usually building side projects, experimenting with new technologies, or creating tools that solve real problems.
         </p>
       </div>
 

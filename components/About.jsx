@@ -15,17 +15,17 @@ export const About = () => {
           <div className="space-y-4 text-ink/75 leading-relaxed max-w-2xl">
             <p>
               Hi there! My name is <span className="font-semibold text-ink">Tiffany Pietersen</span>, and
-              I&apos;m a developer with a passion for technology and creating solutions that make a real
-              difference. I earned my diploma in Software Development at IIE Rosebank College. My love for
-              tech started at home — my dad was always building and fixing computers, and his passion for
-              problem-solving inspired me to pursue this path.
+              I&apos;m a software developer from Cape Town with a diploma in Software Development from IIE Rosebank College.
+              My interest in technology started at home, where I watched my dad build and repair computers. 
+              Seeing how technology could solve problems sparked my curiosity, and that curiosity has grown into a career 
+              of building web, mobile, and AI-powered applications.
             </p>
             <p>
+              I enjoy learning new technologies, taking ideas from concept to production, and creating software that is practical, reliable, and meaningful. 
               Outside of coding, I enjoy activities that keep me creative and balanced — whether it&apos;s
               <span className="font-semibold text-ink"> e-sports, reading, baking, music, or writing</span>.
-              These hobbies give me new perspectives that often carry over into how I approach challenges as
-              a developer. My faith also plays an important role in shaping who I am, reminding me to stay
-              grounded and purposeful in everything I do.
+              Outside of development, you'll usually find me reading, baking, listening to music, writing, or serving in my church's media ministry. 
+              My faith keeps me grounded and reminds me to approach both my work and the people around me with purpose.
             </p>
             <p>
               I&apos;m currently working at <span className="font-semibold text-ink">Appmaniazar</span> as a
