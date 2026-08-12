@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// Images
 import Html from "../public/assets/html.png";
 import Css from "../public/assets/css.png";
 import Javascript from "../public/assets/javascript.png";
@@ -66,58 +65,67 @@ const categories = [
 
 export const Skills = () => {
   return (
-    <section id="skills" className="w-full py-24">
-      <p className="font-mono text-sm text-sage uppercase tracking-widest mb-2">
-        Skills
-      </p>
+    <section id="skills" className="relative w-full py-32 px-6 md:px-16 lg:px-32 overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-pink/10 blur-[120px]" />
 
-      <h2 className="font-display text-4xl md:text-5xl text-ink mb-14">
-        Technologies I Work With
-      </h2>
+      <div className="relative z-10 max-w-[1240px] m-auto">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="font-mono text-sm text-pink uppercase tracking-widest mb-2"
+        >
+          Skills
+        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="font-display text-4xl md:text-5xl text-white mb-16"
+        >
+          Technologies I <span className="text-gradient">work with</span>
+        </motion.h2>
 
-      <div className="space-y-14">
-        {categories.map((category) => (
-          <div key={category.title}>
-            <h3 className="text-xl font-semibold text-ink mb-6">
-              {category.title}
-            </h3>
+        <div className="space-y-16">
+          {categories.map((category) => (
+            <div key={category.title}>
+              <h3 className="text-xl font-display font-semibold text-white mb-8 flex items-center gap-3">
+                <span className="inline-block w-8 h-px bg-pink" />
+                {category.title}
+              </h3>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-              {category.skills.map((skill, index) => (
-                <motion.div
-                  key={skill.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.35,
-                    delay: index * 0.05,
-                  }}
-                  whileHover={{
-                    y: -8,
-                    scale: 1.04,
-                  }}
-                  whileTap={{ scale: 0.97 }}
-                  className="group rounded-3xl border border-stone-200 bg-white p-8 shadow-sm transition-all hover:border-coral hover:shadow-xl cursor-default"
-                >
-                  <div className="flex justify-center">
-                    <Image
-                      src={skill.src}
-                      width={65}
-                      height={65}
-                      alt={skill.title}
-                      className="transition duration-300 group-hover:scale-110 group-hover:rotate-6"
-                    />
-                  </div>
-
-                  <h4 className="mt-6 text-center font-semibold text-ink">
-                    {skill.title}
-                  </h4>
-                </motion.div>
-              ))}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                {category.skills.map((skill, index) => (
+                  <motion.div
+                    key={skill.title}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.35, delay: index * 0.05 }}
+                    whileHover={{ y: -8, scale: 1.04 }}
+                    whileTap={{ scale: 0.97 }}
+                    className="group rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-pink/50 hover:bg-pink/5 hover:glow-pink-sm cursor-default"
+                  >
+                    <div className="flex justify-center">
+                      <Image
+                        src={skill.src}
+                        width={65}
+                        height={65}
+                        alt={skill.title}
+                        className="transition duration-300 group-hover:scale-110 group-hover:rotate-6"
+                      />
+                    </div>
+                    <h4 className="mt-6 text-center font-semibold text-white/70 group-hover:text-pink transition-colors duration-300">
+                      {skill.title}
+                    </h4>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

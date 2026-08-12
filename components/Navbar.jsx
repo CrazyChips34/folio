@@ -1,58 +1,104 @@
 "use client";
 
-import React, { use } from 'react';
-import { BsFillHouseFill, BsFillPersonFill, BsGrid1X2Fill, BsFillGearFill, BsFillEnvelopeFill } from 'react-icons/bs';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 export const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: 'Home', to: 'home' },
+    { name: 'About', to: 'about' },
+    { name: 'Projects', to: 'projects' },
+    { name: 'Skills', to: 'skills' },
+    { name: 'Contact', to: 'contact' },
+  ];
+
   return (
-    <div>
-      {/*-----Top Bar-----*/}
-      <nav id='home' className='flex items-center justify-between py-8'>
-        <h1 className='font-display text-lg tracking-tight text-ink'>
-          tiffany<span className='text-coral'>.</span>dev
-        </h1>
-        <a
-          className='px-5 py-2.5 text-sm font-semibold text-paper bg-ink rounded-full hover:bg-coral transition-colors'
-          href='/Curriculum_Vitae _Of_Tiffany_Pietersen.pdf'
-          target='_blank'
-          rel='noreferrer'
-          download
-        >
-          Download CV
-        </a>
+    <>
+      <nav
+        className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
+          scrolled ? 'bg-black/80 backdrop-blur-md py-4' : 'bg-transparent py-6'
+        }`}
+      >
+        <div className='flex items-center justify-between px-6 md:px-16 lg:px-32'>
+          <Link to='home' smooth duration={500} className='cursor-pointer'>
+            <h1 className='font-display text-xl tracking-tight text-white'>
+              tiffany<span className='text-pink text-glow'>.</span>dev
+            </h1>
+          </Link>
+
+          {/* Desktop nav */}
+          <div className='hidden md:flex items-center gap-8'>
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.to}
+                smooth
+                duration={500}
+                offset={-80}
+                className='cursor-pointer font-mono text-xs uppercase tracking-widest text-white/60 hover:text-pink transition-colors'
+              >
+                {link.name}
+              </Link>
+            ))}
+            <a
+              className='px-5 py-2.5 text-sm font-semibold text-black bg-pink rounded-full hover:bg-pink-glow transition-all hover:glow-pink-sm'
+              href='/Curriculum_Vitae _Of_Tiffany_Pietersen.pdf'
+              target='_blank'
+              rel='noreferrer'
+              download
+            >
+              Download CV
+            </a>
+          </div>
+
+          {/* Mobile toggle */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className='md:hidden text-white text-2xl'
+            aria-label='Toggle menu'
+          >
+            {menuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+          </button>
+        </div>
       </nav>
 
-      {/*-----Floating Bottom Nav-----*/}
-      <div className='fixed bottom-4 left-0 z-20 w-full flex justify-center px-4'>
-        <nav className='flex items-center gap-1 px-2 py-2 bg-ink/95 backdrop-blur rounded-full shadow-lg'>
-          <Link to='home' smooth={true} duration={500} className='cursor-pointer'>
-            <div className='p-2.5 sm:p-3 rounded-full text-paper hover:bg-coral hover:text-ink transition-colors'>
-              <BsFillHouseFill className='text-lg sm:text-xl' />
-            </div>
-          </Link>
-          <Link to='about' smooth={true} duration={500} className='cursor-pointer'>
-            <div className='p-2.5 sm:p-3 rounded-full text-paper hover:bg-coral hover:text-ink transition-colors'>
-              <BsFillPersonFill className='text-lg sm:text-xl' />
-            </div>
-          </Link>
-          <Link to='projects' smooth={true} duration={500} className='cursor-pointer'>
-            <div className='p-2.5 sm:p-3 rounded-full text-paper hover:bg-coral hover:text-ink transition-colors'>
-              <BsGrid1X2Fill className='text-lg sm:text-xl' />
-            </div>
-          </Link>
-          <Link to='skills' smooth={true} duration={500} className='cursor-pointer'>
-            <div className='p-2.5 sm:p-3 rounded-full text-paper hover:bg-coral hover:text-ink transition-colors'>
-              <BsFillGearFill className='text-lg sm:text-xl' />
-            </div>
-          </Link>
-          <Link to='contact' smooth={true} duration={500} className='cursor-pointer'>
-            <div className='p-2.5 sm:p-3 rounded-full text-paper hover:bg-coral hover:text-ink transition-colors'>
-              <BsFillEnvelopeFill className='text-lg sm:text-xl' />
-            </div>
-          </Link>
-        </nav>
-      </div>
-    </div>
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className='fixed top-0 left-0 z-40 w-full h-screen bg-black/95 backdrop-blur-lg flex flex-col items-center justify-center gap-8 md:hidden'>
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              to={link.to}
+              smooth
+              duration={500}
+              offset={-80}
+              onClick={() => setMenuOpen(false)}
+              className='cursor-pointer font-display text-3xl text-white hover:text-pink transition-colors'
+            >
+              {link.name}
+            </Link>
+          ))}
+          <a
+            className='mt-4 px-8 py-3 text-sm font-semibold text-black bg-pink rounded-full'
+            href='/Curriculum_Vitae _Of_Tiffany_Pietersen.pdf'
+            target='_blank'
+            rel='noreferrer'
+            download
+          >
+            Download CV
+          </a>
+        </div>
+      )}
+    </>
   );
 };

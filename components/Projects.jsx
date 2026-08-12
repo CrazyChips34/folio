@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -30,44 +31,74 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <div id="projects" className="w-full py-24">
-      <p className="font-mono text-sm text-sage uppercase tracking-widest mb-2">Projects</p>
-      <h2 className="font-display text-4xl md:text-5xl text-ink mb-12">
-        Things I&apos;ve shipped
-      </h2>
+    <div id="projects" className="relative w-full py-32 px-6 md:px-16 lg:px-32 overflow-hidden">
+      <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-pink/10 blur-[120px]" />
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
-          <div
-            key={project.name}
-            className="flex flex-col rounded-3xl border-2 border-ink bg-white overflow-hidden hover:-translate-y-1 transition-transform duration-200"
-          >
-            <div className="flex items-start justify-between px-5 pt-5">
-              <h3 className="font-display text-xl text-ink">{project.name}</h3>
-              <span
-                className={`status-tag shrink-0 ml-3 px-2.5 py-1 rounded-full text-ink ${
-                  project.status === "Shipped" ? "bg-gold" : "bg-rose/70"
-                }`}
-              >
-                {project.status.toUpperCase()}
-              </span>
-            </div>
-            <p className="px-5 mt-1 text-xs font-mono text-ink/50">{project.role}</p>
-            <p className="px-5 mt-3 text-sm text-ink/70 leading-relaxed flex-1">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap gap-2 px-5 py-5 mt-2 border-t border-line">
-              {project.stack.map((tech) => (
+      <div className="relative z-10 max-w-[1240px] m-auto">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="font-mono text-sm text-pink uppercase tracking-widest mb-2"
+        >
+          Projects
+        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="font-display text-4xl md:text-5xl text-white mb-14"
+        >
+          Things I&apos;ve <span className="text-gradient">shipped</span>
+        </motion.h2>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.name}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -8 }}
+              className="group flex flex-col rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-transparent overflow-hidden hover:border-pink/50 transition-all duration-300 hover:glow-pink"
+            >
+              {/* Top accent line */}
+              <div className="h-1 w-full bg-gradient-to-r from-pink via-pink-glow to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+
+              <div className="flex items-start justify-between px-6 pt-6">
+                <h3 className="font-display text-2xl text-white group-hover:text-pink transition-colors duration-300">
+                  {project.name}
+                </h3>
                 <span
-                  key={tech}
-                  className="font-mono text-[0.7rem] px-2.5 py-1 rounded-full bg-paper border border-line text-ink/70"
+                  className={`status-tag shrink-0 ml-3 px-2.5 py-1 rounded-full ${
+                    project.status === "Shipped"
+                      ? "bg-pink/20 text-pink border border-pink/30"
+                      : "bg-white/10 text-white/70"
+                  }`}
                 >
-                  {tech}
+                  {project.status.toUpperCase()}
                 </span>
-              ))}
-            </div>
-          </div>
-        ))}
+              </div>
+              <p className="px-6 mt-1 text-xs font-mono text-white/30">{project.role}</p>
+              <p className="px-6 mt-4 text-sm text-white/50 leading-relaxed flex-1">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap gap-2 px-6 py-6 mt-2 border-t border-white/5">
+                {project.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="font-mono text-[0.7rem] px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/50 group-hover:border-pink/30 group-hover:text-pink/70 transition-colors duration-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
